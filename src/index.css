@@ -1,13 +1,548 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 10px 10px 10px 20px;
+}
+
+.plants {}
+.plants .calendar {
+    margin: 0 0 80px;
+}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+h3 {
+    margin: 0 0 10px;
+}
+
+.vega,
+.flora {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.week {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: initial;
+    padding: 0;
+    margin: 0;
+    background: #ccc;
+    border: 1px solid #000;
+    list-style: none;
+}
+.week li {
+    border: 1px solid #fff;
+    display: block;
+    font-size: 13px;
+    font-weight: 100;
+    margin: 0;
+    position: relative;
+}
+.week li .count {
+    background: red;
+    color: #fff;
+    display: block;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    font-size: 10px;
+    text-align: center;
+    top: 1px;
+    right: 1px;
+    position: absolute;
+}
+.week li.week-count {
+    /*background: aquamarine;*/
+    display: grid;
+    font-size: 16px;
+    grid-column: 1/3;
+    text-align: center;
+    align-content: space-around;
+}
+
+
+*, body {
+    box-sizing: border-box;
+    color: #242424;
+    font-family: 'Helvetica', 'Arial', 'Tahoma', sans-serif;
+    font-size: 13px;
+}
+@media only screen and (max-width: 680px) {
+    *, body {
+        font-size: 12px;
+    }
+}
+body {
+    background: #444;
+}
+.hide {
+    display: none !important;
+}
+
+#root {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+}
+#root .header {
+    background: #e2e0e0;
+    /*border-bottom-right-radius: 10px;*/
+    border-bottom-left-radius: 10px;
+    margin: 0 0 20px;
+    padding: 10px;
+    position: relative;
+}
+#root .header h1 {
+    color: #656565;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 30px;
+    margin: 0;
+}
+#root .header h1 strong {
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+@media only screen and (max-width: 480px) {
+    #root .header h1,
+    #root .header h1 strong {
+        font-size: 12px;
+    }
+}
+#root .header .growths-list {
+    background: #fff;
+    display: block;
+    cursor: pointer;
+    width: auto;
+    min-width: 150px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 6px 30px 6px 10px;
+}
+#root .header .growths-list:after {
+    content: "";
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: block;
+    width: 7px;
+    height: 7px;
+    top: 9px;
+    right: 10px;
+    position: absolute;
+    transform: rotate(45deg);
+}
+#root .header .growths-list span {
+    color: #333;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 14px;
+}
+#root .header .growths-list ul {
+    display: none;
+    background: #f0f0f0;
+    margin: 0;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    top: 30px;
+    width: auto;
+    min-width: 100%;
+    left: 0;
+}
+#root .header .growths-list ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 7px 15px;
+    white-space: nowrap;
+}
+#root .header .growths-list ul li a:hover {
+    background: #656565;
+    color: #e2e0e0;
+}
+#root .header .growths-list:hover {
+    box-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+#root .header .growths-list:hover ul {
+    display: block;
+}
+.abas {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.abas li {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: inline-block;
+    background: #666;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #e2e0e0;
+    text-decoration: none;
+}
+.abas li.active {
+    background: #e2e0e0;
+}
+.abas li.active a {
+    color: #333;
+}
+.abas li a {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #e2e0e0;
+    text-decoration: none;
+    padding: 10px;
+}
+@media only screen and (max-width: 480px) {
+    .abas li {
+        border-radius: 0;
+        display: block;
+        width: 100%;
+        margin: 0 0 2px;
+    }
+
+    .abas li a {
+        display: block;
+    }
+}
+.calendar {
+    background: #e2e0e0;
+    display: block;
+    clear: both;
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.calendar:after {
+    content: "";
+    display: block;
+    float: none;
+    clear: both;
+    width: 100%;
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    background: #fffcd6;
+    display: block;
+    float: left;
+    width: 340px;
+    padding: 10px;
+
+}
+@media only screen and (max-width: 680px) {
+    aside {
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    aside {
+        float: none;
+        width: 100%;
+    }
+}
+
+aside table {
+    width: 100%;
+    margin: 0;
+}
+@media only screen and (max-width: 480px) {
+    aside table tr.hidden-xs {
+        display: none;
+    }
+}
+aside h3.subtitle {
+    text-align: center;
+    margin: 9px 0;
+}
+aside h3.subtitle sup {
+    color: #666;
+}
+aside .points {
+    height: 52px;
+    overflow: auto;
+    text-align: center;
+}
+aside table th,
+aside table td {
+    width: 60%;
+    padding: 2px;
+    line-height: 24px;
+}
+aside table.point-list th,
+aside table.point-list td {
+    padding: 0;
+    width: 70%;
+    /*line-height: 24px;*/
+}
+aside table td.title {
+    font-size: 17px;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+    padding: 7px;
+    font-weight: 600;
+}
+aside table th {
+    width: 40%;
+    text-align: right;
+    vertical-align: top;
+}
+aside table.point-list th {
+    width: 30%;
+}
+aside table button,
+aside table a.btn-ok {
+    width: auto;
+    border: 1px solid #bd1818;
+    background: #bd1818;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 20px;
+    line-height: 15px;
+    text-decoration: none;
+}
+aside table button.btn-ok,
+aside table a.btn-ok {
+    display: inline-block;
+    width: 20px;
+    height: 24px;
+    padding: 4px 5px;
+    line-height: 14px;
+}
+
+aside textarea {
+    background: rgba(255,255,255,0.5);
+    border: 0;
+    /*border-bottom: 1px solid #d8d28d;*/
+    font-family: 'Helvetica', 'Arial', 'Tahoma', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333;
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+}
+aside .input_s,
+aside .input_m,
+aside .input_g {
+    background: rgba(255,255,255,0.5);
+    border: 0;
+    /*border-bottom: 1px solid #d8d28d;*/
+    width: 34px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0;
+    text-align: center;
+}
+aside .input_m {
+    width: 118px;
+    text-align: left;
+}
+aside .input_g {
+    width: calc(100% - 48px);
+    text-align: left;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+/* adjust increase/decrease button */
+input[type="date"]::-webkit-inner-spin-button {
+    z-index: 1;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* adjust clear button */
+input[type="date"]::-webkit-clear-button {
+    z-index: 1;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+main {
+    display: block;
+    float: right;
+    width: calc(100% - 360px);
+}
+@media only screen and (max-width: 680px) {
+    main {
+        width: calc(100% - 261px);
+    }
+}
+@media only screen and (max-width: 480px) {
+    main {
+        float: none;
+        width: 100%;
+    }
+}
+main .calendar {
+    background: #f0f0f0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+main .calendar:after {
+    content: "";
+    display: block;
+    float: none;
+    clear: both;
+    width: 100%;
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+main .calendar h2 {
+    font-size: 17px;
+    color: #333;
+    margin: 0 0 10px;
+}
+main ul {
+    /*display: block;*/
+    /*float: left;*/
+    /*list-style: none;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*width: 25%;*/
+    /*height: 126px;*/
+}
+@media only screen and (max-width: 680px) {
+    main ul {
+        /*width: 50%;*/
+    }
+}
+@media only screen and (max-width: 480px) {
+    main ul {
+        /*width: 50%;*/
+    }
+}
+main ul li {
+    /*background: #fff;*/
+    /*border: 1px solid #fff;*/
+    /*border-collapse: collapse;*/
+    /*display: block;*/
+    /*float: left;*/
+    /*list-style: none;*/
+    /*width: calc(100% / 3);*/
+    /*height: 42px;*/
+    /*line-height: 42px;*/
+    /*text-align: center;*/
+    /*position: relative;*/
+}
+main ul li.odd {
+    background: rgba(255,255,255,0.6);
+}
+main ul li span.count {
+    background: #fff;
+    display: block;
+    color: #242424;
+    font-size: 9px;
+    line-height: 12px;
+    width: 14px;
+    height: 12px;
+    /*top: 0;*/
+    /*left: 0;*/
+    /*position: absolute;*/
+}
+main ul li .point {
+    background: #bd1818;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    top: 2px;
+    right: 2px;
+    position: absolute;
+}
+main ul li .point ul {
+    display: none;
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    border-radius: 4px;
+    width: auto;
+    min-width: 150px;
+    height: auto;
+    bottom: 4px;
+    padding: 10px 10px 2px;
+    text-align: left;
+    font-size: 12px;
+    color: #222;
+    position: absolute;
+    z-index: 999;
+}
+main ul li .point ul li {
+    border: 0;
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    line-height: 17px;
+    text-align: left;
+    font-size: 12px;
+    margin: 0 0 8px 7px;
+    text-indent: -7px;
+}
+main ul li .point:hover ul {
+    display: block;
+}
+
+main ul li.week-count {
+    background: #333;
+    color: #fff;
+}
+main ul li.passado {
+    background: rgb(226, 224, 224);
+    color: #aaa;
+}
+main ul li.passado span {
+    color: #aaa;
+}
+main ul li.hoje {
+    background: #bd1818 !important;
+    /*border: 1px solid #bd1818;*/
+    color: #fff !important;
+}
+main ul li.hoje span {
+    color: #bd1818;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 1px 2px 0 0;
 }

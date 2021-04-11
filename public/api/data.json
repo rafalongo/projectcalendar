@@ -1,0 +1,24 @@
+{
+  "genetics": [
+    {
+      "genetic": {
+        "name": "Amnésia Haze",
+        "start": "January 18, 2021",
+        "period": {
+          "vega": 26,
+          "flora": 56
+        }
+      }
+    },
+    {
+      "genetic": {
+        "name": "London Cheese",
+        "start": "February 1, 2021",
+        "period": {
+          "vega": 24,
+          "flora": 52
+        }
+      }
+    }
+  ]
+}

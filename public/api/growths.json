@@ -1,0 +1,29 @@
+{
+  status: true,
+  result: [
+    {
+      growth_id: "5",
+      growth_name: "Cultivo N.4",
+      growth_status: "1",
+      user_id: "1"
+    },
+    {
+      growth_id: "4",
+      growth_name: "Cultivo N.3",
+      growth_status: "1",
+      user_id: "1"
+    },
+    {
+      growth_id: "2",
+      growth_name: "Cultivo N.2",
+      growth_status: "1",
+      user_id: "1"
+    },
+    {
+      growth_id: "1",
+      growth_name: "Cultivo N.1",
+      growth_status: "1",
+      user_id: "1"
+    }
+  ]
+}

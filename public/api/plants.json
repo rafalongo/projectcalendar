@@ -1,0 +1,35 @@
+{
+  status: true,
+  result: [
+    {
+      plant_id: "13",
+      plant_strain: "Amnesia",
+      plant_pots: "1",
+      plant_start_vega: "2021-01-18",
+      plant_cycle_vega: "26",
+      plant_cycle_bloom: "56",
+      plant_details: "Gen: Automática THC: Alto Satividade: 80% 12/06 - 10h sementes no copo com água 13/06 - 22h sementes no papel toalha 16/06 - 10h sementes na terra 18/06 - 10h primeiro dia de vida",
+      growth_id: "5"
+    },
+    {
+      plant_id: "14",
+      plant_strain: "Lemon Haze",
+      plant_pots: "1",
+      plant_start_vega: "2021-01-30",
+      plant_cycle_vega: "26",
+      plant_cycle_bloom: "54",
+      plant_details: "Gen: Automática THC: Médio-Alto Satividade: 80% 12/06 - 10h sementes no copo com água 13/06 - 22h sementes no papel toalha 16/06 - 10h sementes na terra 18/06 - 10h primeiro dia de vida",
+      growth_id: "5"
+    },
+    {
+      plant_id: "16",
+      plant_strain: "London Cheese",
+      plant_pots: "1",
+      plant_start_vega: "2021-02-01",
+      plant_cycle_vega: "24",
+      plant_cycle_bloom: "52",
+      plant_details: "Gen: Automática THC: Médio-Alto Satividade: 60% 12/06 - 10h sementes no copo com água 13/06 - 22h sementes no papel toalha 16/06 - 10h sementes na terra 18/06 - 10h primeiro dia de vida",
+      growth_id: "5"
+    }
+  ]
+}
